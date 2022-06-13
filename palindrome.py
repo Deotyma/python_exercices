@@ -1,7 +1,7 @@
 # palindrome of word
 # method 1
 def palindrome1 (word):
-    word2 = word[::-1]
+    word2 = word[::-1] #word 2 is renversed by [::–1] slice whitch starts from last letter
     print (word2)
 
     if word == word2:
