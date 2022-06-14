@@ -19,5 +19,4 @@ def evenNumbers2():
             continue
         print(n)
 
-
 evenNumbers2()
