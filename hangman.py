@@ -1,3 +1,4 @@
+from multiprocessing.dummy import current_process
 import random
 
 words = "shave pin committee protest mainstream heaven respect precedent failure smell opposed paper translate place crutch flash frog conference koran put ex frighten plane crude innocent doubt minor looting different testify elite tired officer blame objective swim acid book judicial professional stereotype ankle visual trance rib church ride facade cool recover"
@@ -18,8 +19,11 @@ print(f"lifes: {hangman['lifes']}")
 while True:
     letter = input("Give my your letter: ")
     if letter in hangman['secret_word'] and letter not in hangman['guess_word']:
-        pass
-    #here I replace _ by letter
+        guess_word_letters = list(hangman['guess_word'])
+        for index, current_letter in enumerate(hangman['secret_word']):
+            if current_letter == letter:
+                guess_word_letters[index] = letter
+            hangman['guess_word'] = ''.join(guess_word_letters)
     elif letter not in hangman['secret_word']:
         hangman['lifes' -1]
     print(f"{hangman['guess_word']}")
