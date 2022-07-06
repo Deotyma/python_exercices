@@ -25,12 +25,12 @@ while True:
                 guess_word_letters[index] = letter
             hangman['guess_word'] = ''.join(guess_word_letters)
     elif letter not in hangman['secret_word']:
-        hangman['lifes' -1]
+        hangman['lifes'] -=1
     print(f"{hangman['guess_word']}")
     print(f"lifes: {hangman['lifes']}")
     if '_' not in hangman['guess_word']:
         print('Bravo')
         break
-    elif hangman['lifes'<1]:
+    elif hangman['lifes']<1:
         print('Game over')
         break
