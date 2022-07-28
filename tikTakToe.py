@@ -15,8 +15,8 @@ def winnerInfo():
             messagebox.showinfo('The winner is...', 'The winner is... Player O')
     elif playerX == False:
             messagebox.showinfo('The winner is...', 'The winner is... Player X')
-    
-    
+
+
 
 def winnerIs():
     if btn1["text"] != "?" and btn1["text"] == btn2["text"] and btn1["text"] == btn3["text"]:
@@ -114,7 +114,7 @@ def winnerIs():
         btn8.config(state = DISABLED)
         btn9.config(state = DISABLED)
         winnerInfo()
-        
+
 
 def xOro(btn):
     global playerX
@@ -148,9 +148,3 @@ btn8 = Button(window, text = "?",font="Arial 50 bold", fg= "blue", command = lam
 btn8.grid(column=2, row=3)
 btn9 = Button(window, text = "?",font="Arial 50 bold", fg= "blue", command = lambda:xOro(btn9))
 btn9.grid(column=3, row=3)
-
-
-
-
-
-
